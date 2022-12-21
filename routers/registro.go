@@ -38,7 +38,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 
 	_, status, err := bd.InsertoRegistro(t)
 	if err != nil {
-		http.Error(w, "Error al intentar realizar el registro de usuario"+err.Error(), 400)
+		http.Error(w, "Error al intentar realizar el registro de usuario "+err.Error(), 400)
 		return
 	}
 
