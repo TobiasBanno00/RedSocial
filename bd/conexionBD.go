@@ -8,8 +8,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var MongoCN = ConectarBD()                                                                                                                          // url que va a conectar
-var clientOptions = options.Client().ApplyURI("mongodb+srv://TobiasBanno:ContraMDB1234@redsocial.mvci4kr.mongodb.net/?retryWrites=true&w=majority") // setea URL de base de datos
+var MongoCN = ConectarBD()                                                                                                                     // url que va a conectar
+var clientOptions = options.Client().ApplyURI("mongodb+srv://TobiasBanno:Tb339059@redsocial.mvci4kr.mongodb.net/?retryWrites=true&w=majority") // setea URL de base de datos
 
 func ConectarBD() *mongo.Client { // fun que me permite contectar la bd
 	client, err := mongo.Connect(context.TODO(), clientOptions)
