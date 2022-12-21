@@ -11,17 +11,17 @@ import (
 var MongoCN = ConectarBD()                                                                                                                     // url que va a conectar
 var clientOptions = options.Client().ApplyURI("mongodb+srv://TobiasBanno:Tb339059@redsocial.mvci4kr.mongodb.net/?retryWrites=true&w=majority") // setea URL de base de datos
 
-func ConectarBD() *mongo.Client { // fun que me permite contectar la bd
+func ConectarBD() *mongo.Client {
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 
 	if err != nil {
-		log.Fatal(err.Error()) // usamos fun .Error ya que lo convierte el obj en string
+		log.Fatal("No se pudo conectar a la BD: " + err.Error()) // usamos fun .Error ya que lo convierte el obj en string
 		return client
 	}
 	err = client.Ping(context.TODO(), nil) //ve si la conexion está disponible
 
 	if err != nil {
-		log.Fatal(err.Error())
+		log.Fatal("conexión no disponible en la BD: " + err.Error())
 		return client
 	}
 
