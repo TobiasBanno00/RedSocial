@@ -15,7 +15,7 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	db := MongoCN.Database("redSocial")
 	col := db.Collection("usuarios")
 
-	condicion := bson.M{"email": email}
+	condicion := bson.M{"email": email} // chequeo en la base de datos por email
 
 	var resultado models.Usuario
 

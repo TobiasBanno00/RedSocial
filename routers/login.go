@@ -11,7 +11,7 @@ import (
 )
 
 func Login(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("Content-Type", "application/json")
+	w.Header().Add("Content-Type", "application/json") //le decimos al cliente que tipo de contenido será retornado.
 
 	var t models.Usuario
 	err := json.NewDecoder(r.Body).Decode(&t)
