@@ -2,7 +2,6 @@ package bd
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/TobiasBanno00/RedSocial/models"
@@ -40,7 +39,7 @@ func ModificoRegisto(u models.Usuario, ID string) (bool, error) {
 	if len(u.SitioWeb) > 0 {
 		registro["sitioWeb"] = u.SitioWeb
 	}
-	fmt.Println(registro["ubicacion"])
+
 	updtString := bson.M{
 		"$set": registro,
 	}
