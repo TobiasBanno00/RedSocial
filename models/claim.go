@@ -8,6 +8,6 @@ import (
 /* estructura para decofidicar token */
 type Claim struct {
 	Email string             `json:"email"`
-	ID    primitive.ObjectID `bson:"_id" json:"_id", omitempty:"`
+	ID    primitive.ObjectID `bson:"_id" json:"_id,omitempy"`
 	jwt.StandardClaims
 }
